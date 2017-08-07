@@ -6,7 +6,7 @@ package logindemo.hewentao.com.logindemo.util;
 
 public class Urls {
 
-    public static final String BASIC_URL = "http://118.89.235.15:8088/xqjr/";
+    public static final String BASIC_URL = "http://118.89.235.15:8088/xqjr/user/";
 
     public static final String REGISTER_URL = BASIC_URL + "appUserSign.do";
 

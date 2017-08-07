@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -63,15 +64,15 @@ public class MainActivity extends AppCompatActivity {
         hideInput(username_et);
         result_tv.setText("正在注册...");
 
-        String username = username_et.getText().toString().trim();
+        String phone = username_et.getText().toString().trim();
         String password = password_et.getText().toString().trim();
         String email = email_et.getText().toString().trim();
 
         RequestParams params = new RequestParams(Urls.REGISTER_URL);
-        params.addParameter("username", username);
+        params.addParameter("phone", phone);
         params.addParameter("password", password);
-        params.addParameter("email", email);
-
+        System.out.println("1234");
+        System.out.println("**5678**"+params.toString());
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -109,11 +110,12 @@ public class MainActivity extends AppCompatActivity {
         RequestParams params = new RequestParams(Urls.LOGIN_URL);
         params.addParameter("phone", phone);
         params.addParameter("password", password);
+        System.out.println("**5678**"+params.toString());
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
 
-                if (result.contains("true")) {
+                if (result.contains("1")) {
                     result_tv.setText("登录成功");
                     Toast.makeText(getApplicationContext(), "自定义显示位置的Toast", Toast.LENGTH_SHORT).show();
                     Intent intent =new Intent();

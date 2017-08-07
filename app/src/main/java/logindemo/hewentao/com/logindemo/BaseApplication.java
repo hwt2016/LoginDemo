@@ -1,7 +1,9 @@
 package logindemo.hewentao.com.logindemo;
 
-import org.xutils.x;
+
 import android.app.Application;
+
+import org.xutils.x;
 
 
 /**

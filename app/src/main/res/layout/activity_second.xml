@@ -12,4 +12,10 @@
         android:layout_height="wrap_content"
         android:text="other"/>
 
+    <Button
+        android:id="@+id/btn_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传"/>
+
 </android.support.constraint.ConstraintLayout>
